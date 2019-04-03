@@ -21,10 +21,10 @@ mongoose
     .catch(err => console.log(err))
     .then(() => console.log("MongoDB connected successfully!"))
 
-//let server listen on defined port
 const port = 1337
 //const port = process.env.PORT || 5000; process.env.port is Heroku's port if you choose to deploy the app there
+    
 
-app.listen(port, () => {
+app.listen(port, () => {//let server listen on defined port
     console.log(`App listening on ${port}!`);
 });

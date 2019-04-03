@@ -18,28 +18,29 @@ module.exports = function validateRegisterInput(data) {
 
   //email check
   if (Validator.isEmpty(data.email)) {
-    errors.email = 'Email field is required';
+    errors.email = 'Please enter an email';
   } else if (!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid';
   }
   //password check
   if (Validator.isEmpty(data.password)) { //check if the password field is empty
-    errors.password = 'Password field is required'
+    errors.password = 'Please enter a password'
   }
   if (Validator.isEmpty(data.password2)) { //check to see if the confirm passworld field is empty
-    errors.password2 = 'Confirm password field is required'
+    errors.password2 = 'Please confirm password'
   }
   if (Validator.isLength(data.password, {
       min: 6,
       max: 16
     })) { //check if the password length matches the predefined length config
-    errors.password = 'Password must be at least 6 characters'
+    errors.password = 'Password must be at least 6 characters long'
   }
   if (!Validator.equals(data.password, data.password2)) {
     errors.password = 'Passwords must match'
   }
-  return {
+  return {//return our errors obj and 
     errors,
     isvalid: isEmpty(errors)
   };
+
 };

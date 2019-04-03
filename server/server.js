@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());//parse to jason
 
-const db = require("/home/hc-19/Carlosf96/MVP/config/keys.js").mongoURI;//require config for DB
+const db = require("/home/hc-19/Carlosf96/MVP/config/keys").mongoURI;//require config for DB
 
 mongoose
     .connect(

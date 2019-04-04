@@ -32,10 +32,13 @@
     "ws": "3.3.2"
   },
   "scripts": {
+    "client-insall": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "keywords": [],
+  "keywords": ["React","ReactJS","NodeJS","0Auth","JWT","ExpressJS","MongoDB","mongoose"],
   "author": "Carlos Francisco Franco",
   "license": "ISC"
 }

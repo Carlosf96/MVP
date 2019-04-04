@@ -24,17 +24,15 @@ module.exports = function validateRegisterInput(data) {
   }
   //password check
   if (Validator.isEmpty(data.password)) { //check if the password field is empty
-    errors.password = 'Please enter a password'
+    errors.password = 'Please enter a password';
   }
   if (Validator.isEmpty(data.password2)) { //check to see if the confirm passworld field is empty
-    errors.password2 = 'Please confirm password'
+    errors.password2 = 'Please confirm password';
   }
-  if (!Validator.isLength(data.password, {
-      min: 6,
-      max: 16
-    })) { //check if the password length matches the predefined length config
+  if (!Validator.isLength(data.password, { min: 6,max: 16 })) { //check if the password length matches the predefined length config
     errors.password = 'Password must be at least 6 characters long'
-  }
+  }//currently not working
+  //TODO:Fix length Validator
   if (!Validator.equals(data.password, data.password2)) {
     errors.password2 = 'Passwords must match'
   }

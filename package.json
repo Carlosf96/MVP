@@ -28,11 +28,12 @@
     "nodemon": "^1.18.10",
     "webpack": "^4.29.6",
     "webpack-dev-middleware": "^3.6.2",
-    "webpack-hot-middleware": "^2.24.3"
+    "webpack-hot-middleware": "^2.24.3",
+    "ws": "3.3.2"
   },
   "scripts": {
     "start": "node server.js",
-    "sever": "nodemon server.js"
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "Carlos Francisco Franco",

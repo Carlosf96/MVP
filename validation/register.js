@@ -29,18 +29,18 @@ module.exports = function validateRegisterInput(data) {
   if (Validator.isEmpty(data.password2)) { //check to see if the confirm passworld field is empty
     errors.password2 = 'Please confirm password'
   }
-  if (Validator.isLength(data.password, {
+  if (!Validator.isLength(data.password, {
       min: 6,
       max: 16
     })) { //check if the password length matches the predefined length config
     errors.password = 'Password must be at least 6 characters long'
   }
   if (!Validator.equals(data.password, data.password2)) {
-    errors.password = 'Passwords must match'
+    errors.password2 = 'Passwords must match'
   }
   return {//return our errors obj and 
     errors,
-    isvalid: isEmpty(errors)
+    isValid: isEmpty(errors)
   };
 
 };

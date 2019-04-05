@@ -12,10 +12,10 @@ import {
   SET_CURRENT_USER, 
   USER_LOADING } from './types';
 //register user
-export const registerUser = (userData) => {
+export const registerUser = (userData) => dispatch => {
   axios
-    .post('/api/users/register', userData)
-    .then(res=>history.push('/login'))//redirect to login on succesful register
+    .post('/api/users/register', userData)//eslint-disable-next-line
+    .then(res => history.push('/login'))//redirect to login on succesful register
     .catch(err => 
       dispatch({
         type: GET_ERRORS,

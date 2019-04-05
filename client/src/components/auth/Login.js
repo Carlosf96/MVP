@@ -12,6 +12,12 @@ class Login extends Component {
     this.onChange=this.onChange.bind(this);
     this.onSubmit=this.onSubmit.bind(this);
   }
+  componentDidMount(){
+    //if logged in and user navs to register page, should redir to dashboard
+    if(this.props.auth.isAuthenticated){
+      this.props.history.push('/dashboard')
+    }
+  }
   onChange(e){
     this.setState({ [e.target.id]: e.target.value });
   }

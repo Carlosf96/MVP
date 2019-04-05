@@ -18,6 +18,13 @@ class Register extends Component {
 
       
   }
+  componentDidMount(){
+    //if logged in and user navs to register page, should redir to dashboard
+    if(this.props.auth.isAuthenticated){
+      this.props.history.push('/dashboard')
+    }
+  }
+
   componentWillReceiveProps(nextProps){
     if(nextProps.errors){
       this.setState({
@@ -101,8 +108,12 @@ class Register extends Component {
                 error={errors.password}
                 id='password'
                 type='password'
+                className={classnames('',{
+                  invalid: errors.password
+                })}
                 />
                 <label htmlFor='password'>Password</label>
+                <span className='red-text'>{errors.password}</span>
             </div> 
             <div className='input-field col s12'>
               <input
@@ -111,8 +122,12 @@ class Register extends Component {
                 error={errors.password2}
                 id='password2'
                 type='password'
+                classnames={classnames('',{
+                  invalid: errors.password2
+                })}
                 />
                 <label htmlFor='password2'>Confirm Password</label>
+                <span className='red-text'>{errors.password2}</span>
             </div> 
             <div className='col s12' style={{ paddingLeft: '11.250px' }}>
               <button
@@ -133,6 +148,11 @@ class Register extends Component {
       </div>
     )
   }
+}
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({//allows us to call this.props.auth||this.props.errors within our Regiser

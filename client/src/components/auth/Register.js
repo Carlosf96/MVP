@@ -155,7 +155,7 @@ Register.propTypes = {
   errors: PropTypes.object.isRequired
 }
 
-const mapStateToProps = state => ({//allows us to call this.props.auth||this.props.errors within our Regiser
+const mapStateToProps = state => ({//allows us to call this.props.auth||this.props.errors within our Register
   auth: state.auth,
   errors: state.errors
 })

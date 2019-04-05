@@ -92,7 +92,7 @@ class Register extends Component {
                 value={this.state.password2}
                 error={errors.password2}
                 id='password2'
-                type='password2'
+                type='password'
                 />
                 <label htmlFor='password2'>Confirm Password</label>
             </div> 

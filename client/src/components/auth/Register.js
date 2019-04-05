@@ -16,13 +16,13 @@ class Register extends Component {
     this.onSubmit=this.onSubmit.bind(this);
   
   }
-  onChange(e){
+  onChange = e => {
     this.setState({
       [e.target.id]: e.target.value
     });
   }
   
-  onSubmit(e){
+  onSubmit = e => {
     e.preventDefault();
 
     const newUser = {
@@ -52,7 +52,7 @@ class Register extends Component {
               <b>Register</b> below
             </h4>
             <p className='grey-text darken-1'>
-              Already have an account? <Link to='/Login'>Login</Link>
+              Already have an account? <Link to='/login'>Login</Link>
             </p>
            </div>
            <form noValidate onSubmit={this.onSubmit}>

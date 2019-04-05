@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Register extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state={
       name: '',
       email: '',
@@ -16,13 +16,13 @@ class Register extends Component {
     this.onSubmit=this.onSubmit.bind(this);
   
   }
-  onChange = e => {
+  onChange(e){
     this.setState({
       [e.target.id]: e.target.value
     });
   }
   
-  onSubmit = e => {
+  onSubmit(e){
     e.preventDefault();
 
     const newUser = {

@@ -15,8 +15,8 @@ class Navbar extends Component {
               }}
               className='col s5 brand-logo cener black-text'>
               <i className='material-icons'>code</i>{/*airbnb style guide says always self close tags that dont have children*/}
+                secLogin
               </Link>
-              FETUS
           </div>
         </nav> 
       </div>

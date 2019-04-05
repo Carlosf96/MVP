@@ -96,8 +96,18 @@ class Register extends Component {
                 />
                 <label htmlFor='password2'>Confirm Password</label>
             </div> 
-            <div className='col s12'>
-
+            <div className='col s12' style={{ paddingLeft: '11.250px' }}>
+              <button
+                style={{
+                  width: '150px',
+                  borderRadius: '3px',
+                  letterSpacing: '1.5px',
+                  marginTop: '1rem'
+                }}
+                type='submit'
+                className='btn btn-large waves-effect waves-light hoverable blue accent-3'>
+                  Sign up
+                </button>
             </div>
            </form>
           </div>
@@ -107,8 +117,7 @@ class Register extends Component {
   }
 }
 
-componentName.propTypes = {
 
-}
+
 
 export default Register;

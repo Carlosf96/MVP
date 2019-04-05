@@ -32,7 +32,7 @@ class Landing extends Component {
                 letterSpacing: '1.5px'
               }}
             >
-
+              Log In
             </a>
           </div>
         </div>

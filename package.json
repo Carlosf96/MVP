@@ -8,6 +8,7 @@
     "body-parser": "^1.18.3",
     "chalk": "^2.4.2",
     "concurrently": "^4.1.0",
+    "create-react-app": "^2.1.8",
     "express": "^4.16.4",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
@@ -26,7 +27,6 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
     "nodemon": "^1.18.10",
-    "webpack": "^4.29.6",
     "webpack-dev-middleware": "^3.6.2",
     "webpack-hot-middleware": "^2.24.3",
     "ws": "3.3.2"
@@ -34,11 +34,20 @@
   "scripts": {
     "client-insall": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js",
+    "server": "nodemon",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "keywords": ["React","ReactJS","NodeJS","0Auth","JWT","ExpressJS","MongoDB","mongoose"],
+  "keywords": [
+    "React",
+    "ReactJS",
+    "NodeJS",
+    "0Auth",
+    "JWT",
+    "ExpressJS",
+    "MongoDB",
+    "mongoose"
+  ],
   "author": "Carlos Francisco Franco",
   "license": "ISC"
 }

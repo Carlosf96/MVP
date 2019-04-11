@@ -3,12 +3,12 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs'); //Needed for password hashing
 const jwt = require('jsonwebtoken');
-const keys = require('/home/hc-19/Carlosf96/MVP/config/keys');
+const keys = require('../../config/keys');
 //load input validation
-const validateRegisterInput = require('/home/hc-19/Carlosf96/MVP/validation/register');
-const validateLoginInput = require('/home/hc-19/Carlosf96/MVP/validation/login');
+const validateRegisterInput = require('../../validation/register');
+const validateLoginInput = require('../../validation/login');
 //load user model
-const User = require('/home/hc-19/Carlosf96/MVP/models/User');
+const User = require('../../models/User');
 //post to api/users/register
 //register user
 //access public

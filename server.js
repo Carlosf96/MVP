@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-const users = require('/home/hc-19/Carlosf96/MVP/routes/api/users.js');
+const users = require('routes/api/users.js');
 const app = express();
 const path = require('path');
 //bodyparse middleware

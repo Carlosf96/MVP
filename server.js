@@ -44,5 +44,5 @@ const port = process.env.PORT || 5000;
 const host = '0.0.0.0';
 
 app.listen(port, host, () => {//let server listen on defined port
-    console.log(`App listening on ${port}!`);
+    console.log(`App listening on ${port}! on ${host}`);
 });

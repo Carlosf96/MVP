@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const port = process.env.PORT || 1337; 
+const port = process.env.PORT || 5000; 
     
 
 app.listen(port, () => {//let server listen on defined port

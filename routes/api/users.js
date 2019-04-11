@@ -4,6 +4,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs'); //Needed for password hashing
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
+const passport = require('passport');
 //load input validation
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
@@ -92,7 +93,7 @@ router.post('/login', (req, res) => {
         //sign token
         jwt.sign(
           payload,
-          keys.secretOrkey, {
+          keys.secretOrKey, {
             expiresIn: 15780000 //6 months in seconds
           },
           (err, token) => {

@@ -20,8 +20,8 @@ mongoose//our connection to mongoDB
         db, {
             useNewUrlParser: true
         })
-    .catch(err => console.log(err))
     .then(() => console.log("MongoDB connected successfully!"))
+    .catch(err => console.log(err))
 //passport middleware
 app.use(passport.initialize());
 //passport configs

@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());//parse to jason
 
-const db = require("/home/hc-19/Carlosf96/MVP/config/keys").mongoURI;//require config for DB
+const db = require("./config/keys").mongoURI;//require config for DB
 
 mongoose//our connection to mongoDB
     .connect(
@@ -25,7 +25,7 @@ mongoose//our connection to mongoDB
 //passport middleware
 app.use(passport.initialize());
 //passport configs
-require('/home/hc-19/Carlosf96/MVP/config/passport')(passport);
+require('./config/passport')(passport);
 //routes
 app.use('/api/users', users)
 //server static assets if in production 

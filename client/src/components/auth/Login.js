@@ -109,7 +109,9 @@ if (nextProps.errors) {
                       borderRadius: '3px',
                       letterSpacing: '1.5px',
                       marginTop: '1rem'
-                    }}
+                  }}
+                  type='submit'
+                  className='btn btn-large waves-effect waves-light hoverable blue accent-4'
                   >Login
                   </button>
                 </div>

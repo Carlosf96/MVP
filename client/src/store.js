@@ -12,9 +12,7 @@ const store = createStore(
   rootReducer,
   initialState,
   compose(
-    applyMiddleware(...middleware),	    applyMiddleware(...middleware),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && //allows to use redux dev extension in browser	  window.__REDUX_DEVTOOLS_EXTENSION__ && //allows to use redux dev extension in browser
-  window.__REDUX_DEVTOOLS_EXTENSION__()
+    applyMiddleware(...middleware)
   )	
 );
 

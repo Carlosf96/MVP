@@ -1,3 +1,4 @@
+![logo](client/public/code-signs.png)
 # Minimum Viable Product Demo APP
 
 A basic log in and authentication web app.
